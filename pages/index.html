@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- INTER FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- SLICK -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
+      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header py-2">
+      <div class="container">
+        <div class="item">
+          <div class="item-left">
+            <img src="../img/image3.png" alt="logo" />
+          </div>
+          <div class="item-right text-white">
+            <button id="cart" class="mr-2 d-flex">
+              <img src="../img/image8.png" alt="cart" />
+              <span id="quantity" class="quantity">(1)</span>
+            </button>
+
+            <button id="login" class="mr-2">Login</button>
+            <button id="register" class="mr-6">Register</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- menu -->
+    <div class="menu py-2">
+      <div class="container">
+        <div class="nav-bar">
+          <div class="tab active">
+            <a href="">Home</a>
+          </div>
+          <div class="tab"><a href="">Men</a></div>
+          <div class="tab"><a href="">Woman</a></div>
+          <div class="tab"><a href="">Kid</a></div>
+          <div class="tab"><a href="">Sport</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- carousel -->
+    <div class="carousel">
+      <div class="container">
+        <div class="productSlides">
+          <div class="item">
+            <div class="image"><img src="../img/image4.png" alt="image1" /></div>
+            <div class="caption">
+              <p class="name">Product name</p>
+              <p class="description">Product description ...</p>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img src="../img/image4.png" alt="image1" />
+            </div>
+            <div class="caption">
+              <p class="name">Product name</p>
+              <p class="description">Product description ...</p>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+          <div class="item">
+            <div class="image">
+              <img src="../img/image4.png" alt="image1" />
+            </div>
+            <div class="caption">
+              <p class="name">Product name</p>
+              <p class="description">Product description ...</p>
+              <button class="buy-now">Buy now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background">
+      <img src="../img/image6.png" alt="" class="w-100" />
+    </div>
+
+    <!-- product features -->
+    <div class="features mt-4">
+      <div class="container">
+        <h1 class="text-center">-Product Feature -</h1>
+        <div id="featureBody" class="feature-body"></div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="help">
+              <h3>Get help</h3>
+              <ul>
+                <a href=""><li>Contact us</li></a>
+                <a href=""><li>Shopping</li></a>
+                <a href=""><li>NIKEiD</li></a>
+                <a href=""><li>Nike+</li></a>
+              </ul>
+            </div>
+            <div class="orders">
+              <h3>Orders</h3>
+              <ul>
+                <a href=""><li>Payment options</li></a>
+                <a href=""><li>Shipping and delivery</li></a>
+                <a href=""><li>Returns</li></a>
+              </ul>
+            </div>
+            <div class="register">
+              <h3>Register</h3>
+              <p>
+                Create one account to manage everything you do with Nike, from
+                your shopping preferences to your Nike+ activity.
+              </p>
+              <a href="" class="red">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="signup">
+              <h3>Email sign up</h3>
+              <p>Be the first to know about new products and special offers.</p>
+              <a href="" class="red">Sign up now</a>
+            </div>
+            <div class="gift">
+              <h3>Gift cards</h3>
+              <p>Give the gift that always fits.</p>
+              <a href="" class="red">View cards</a>
+            </div>
+            <div class="stores">
+              <h3>Stores near you</h3>
+              <p>Locate a Nike retail store or authorized retailer.</p>
+              <a href="" class="red">Search</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- SLICKS -->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".productSlides").slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+        });
+      });
+    </script>
+
+    <!-- axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"
+      integrity="sha512-xIPqqrfvUAc/Cspuj7Bq0UtHNo/5qkdyngx6Vwt+tmbvTLDszzXM0G6c91LXmGrRx8KEPulT+AfOOez+TeVylg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- index.js -->
+    <script src="../js/index.js" type="module"></script>
+  </body>
+</html>

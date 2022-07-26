@@ -70,68 +70,88 @@ ul {
   }
 }
 
-.carousel {
-  position: absolute;
-  width: 100%;
-  .container {
-    .productSlides {
-      background-color: transparent;
-      .item {
-        padding: 10px 70px;
-        display: flex;
-        align-items: center;
-        .name {
-          font-size: 40px;
-          margin: 0;
-        }
-        .description {
-          font-size: 20px;
-        }
-        .buy-now {
-          background-color: #f8b653;
-          width: 150px;
+.content {
+  .item {
+    display: flex;
+    padding: 65px;
+    .item-left {
+      width: 40%;
+      img {
+        width: 70%;
+      }
+    }
+    .item-right {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h1 {
+        font-size: 30px;
+      }
+      h3 {
+        font-size: 24px;
+        color: #1ed90e;
+      }
+      .showing-size {
+        .size-item {
+          width: 50px;
           height: 50px;
-          border-radius: 5px;
+          margin-right: 15px;
+          background-color: #cccccc;
+          font-weight: 600;
+          font-size: 24px;
+          &:hover {
+            background-color: #8c8a8a;
+          }
+        }
+        .size-active {
+          background-color: #8c8a8a;
           color: white;
         }
       }
+      .target-price {
+        margin-top: 10px;
+        color: #fc0303;
+        font-size: 30px;
+      }
 
-      .slick-next {
-        right: 0;
-        &:before {
-          font-size: 40px;
-          color: #f8b653;
+      .quantity-group {
+        margin-top: 10px;
+        .quantity-number {
+          width: 50px;
+          text-align: center;
         }
       }
-      .slick-prev {
-        left: 0;
-        &:before {
-          font-size: 40px;
-          color: #f8b653;
+      .btn-adding {
+        margin-top: 20px;
+        .add_to_cart {
+          padding: 10px;
+          font-weight: 500;
+          font-size: 20px;
+          color: #fff8f8;
+          background: linear-gradient(
+            270deg,
+            rgba(62, 32, 248, 0.9) 5.14%,
+            #d017ee 89.71%
+          );
         }
-      }
-      .slick-dots li button:before {
-        font-size: 10px;
       }
     }
   }
-  .background {
-    position: relative;
-  }
 }
 
-.features {
-  padding: 50px 0;
-  h1 {
+.related-product {
+  margin: 50px 0;
+  .title {
+    text-align: center;
     font-size: 40px;
     font-weight: 400;
   }
-
-  .feature-body {
-    margin: 50px 0;
+  .related-product-content {
+    padding: 30px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 100px;
     .product-item {
       background-color: #f8f8f8;
       display: flex;

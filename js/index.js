@@ -1,4 +1,4 @@
-function renderProductItem(arrProduct, idBody) {
+export function renderProductItem(arrProduct, idBody) {
   var html = "";
 
   for (let i = 0; i < arrProduct.length; i++) {
@@ -13,7 +13,7 @@ function renderProductItem(arrProduct, idBody) {
                 <span class="product-description">${product.description}</span>
               </div>
               <div class="product-action">
-                <button class="product-buy">Buy now</button>
+                <a href="./detail.html?productid=${product.id}" class="product-buy">Buy now</a>
                 <span class="product-price">$${product.price}</span>
               </div>
             </div>

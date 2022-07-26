@@ -34,6 +34,9 @@ ul {
 .header .container .item .item-right {
   display: flex;
 }
+.header .container .item .item-right button:hover {
+  color: #dfdcdc;
+}
 .header .container .item .item-right .quantity {
   margin-top: 4px;
   margin-left: 5px;

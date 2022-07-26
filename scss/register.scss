@@ -32,6 +32,11 @@ ul {
       border: 1px solid #000000;
       .item-right {
         display: flex;
+        button {
+          &:hover {
+            color: #dfdcdc;
+          }
+        }
         .quantity {
           margin-top: 4px;
           margin-left: 5px;

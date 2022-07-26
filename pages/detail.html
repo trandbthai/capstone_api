@@ -54,7 +54,7 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="../css/detail.css" />
   </head>
   <body>
     <!-- header -->
@@ -84,10 +84,10 @@
     <div class="menu py-2">
       <div class="container">
         <div class="nav-bar">
-          <div class="tab active">
+          <div class="tab">
             <a href="./index.html">Home</a>
           </div>
-          <div class="tab"><a href="">Men</a></div>
+          <div class="tab active"><a href="">Men</a></div>
           <div class="tab"><a href="">Woman</a></div>
           <div class="tab"><a href="">Kid</a></div>
           <div class="tab"><a href="">Sport</a></div>
@@ -95,89 +95,47 @@
       </div>
     </div>
 
-    <!-- register-content -->
-    <div class="register-content">
+    <!-- content -->
+    <div class="content">
       <div class="container">
-        <h1 class="register-title">Register</h1>
-
-        <form id="formUser">
-          <div class="register-form">
-            <div class="input-item">
-              <input
-                id="email"
-                class="input_style"
-                type="text"
-                placeholder="email"
-                required
-                pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,}$"
-              />
-              <span class="text-danger">(*)</span>
-              <div id="txt-email" class="txt-input"></div>
-            </div>
-            <div class="input-item">
-              <input
-                id="name"
-                class="input_style"
-                type="text"
-                placeholder="name"
-                required
-                pattern="[a-zA-ZÀÁ ÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]+$"
-              />
-              <span class="text-danger">(*)</span>
-              <div id="txt-name" class="txt-input"></div>
-            </div>
-            <div class="input-item">
-              <input
-                id="password"
-                class="input_style"
-                type="password"
-                placeholder="password"
-                required
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,10}$"
-              />
-              <span class="text-danger">(*)</span>
-              <div id="txt-password" class="txt-input"></div>
-            </div>
-            <div class="input-item">
-              <input
-                id="phone"
-                class="input_style"
-                type="tel"
-                placeholder="phone"
-                required
-                minlength="7"
-                maxlength="10"
-              />
-              <span class="text-danger">(*)</span>
-              <div id="txt-phone" class="txt-input"></div>
-            </div>
-
-            <div class="input-item">
-              <input
-                id="passwordConfirm"
-                class="input_style"
-                type="password"
-                placeholder="password confirm"
-                required
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,10}$"
-              />
-              <span class="text-danger">(*)</span>
-              <span id="txt-passwordConfirm" class="txt-input"></span>
-            </div>
-            <div class="gender-item">
-              <div class="register-gender">
-                <span class="mr-6">Gender</span>
-                <input type="radio" id="male" name="gender" value="true" />
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="false" />
-                <label for="female">Female</label>
-              </div>
-              <div id="txt-gender" class="txt-input"></div>
-            </div>
-            <div class="blank"></div>
-            <button id="btn-submit" class="btn-submit">Submit</button>
+        <div class="item">
+          <div class="item-left">
+            <img id="target-img" src="" alt="" />
           </div>
-        </form>
+          <div class="item-right">
+            <h1 id="target-name">Product name</h1>
+            <p id="target-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis quam quos dolorem reprehenderit maxime aperiam!
+              Quidem temporibus veniam cumque nostrum distinctio, saepe aliquam
+              expedita aspernatur dolore explicabo perferendis, unde odit!
+            </p>
+            <h3>Available size</h3>
+            <div id="target-size" class="showing-size"></div>
+            <span class="target-price">$<span id="target-price"></span></span>
+            <div class="quantity-group">
+              <button class="btn btn-primary" id="quantity-left-plus">+</button>
+              <input
+                type="number"
+                id="quantity-input"
+                class="quantity-number p-2"
+              />
+              <button class="btn btn-primary" id="quantity-right-minus">
+                -
+              </button>
+            </div>
+            <div class="btn-adding">
+              <button class="add_to_cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="related-product">
+      <div class="container">
+        <h1 class="title">- Related Product -</h1>
+        <div id="related-product-content" class="related-product-content"></div>
       </div>
     </div>
 
@@ -258,6 +216,6 @@
     ></script>
 
     <!-- index.js -->
-    <script src="../js/register.js" type="module"></script>
+    <script src="../js/detail.js" type="module"></script>
   </body>
 </html>

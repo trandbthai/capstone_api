@@ -4,17 +4,25 @@ export function renderProductItem(arrProduct, idBody) {
   for (let i = 0; i < arrProduct.length; i++) {
     var product = arrProduct[i];
     html += `
+      <div class="product-col col-lg-4 col-md-6 col-sm-12 col-xs-12">
       <div class="product-item">
               <div class="product-img">
                 <img src="${product.image}" alt="${product.id}" />
               </div>
               <div class="product-details">
                 <p class="product-name">${product.name}</p>
-                <span class="product-description">${product.description}</span>
+                <span class="product-description">${
+                  product.description.length > 100
+                    ? product.description.substring(0, 100) + "..."
+                    : product.description
+                }</span>
               </div>
               <div class="product-action">
-                <a href="./detail.html?productid=${product.id}" class="product-buy">Buy now</a>
+                <a href="./detail.html?productid=${
+                  product.id
+                }" target="_blank" class="product-buy">Buy now</a>
                 <span class="product-price">$${product.price}</span>
+              </div>
               </div>
             </div>
       `;

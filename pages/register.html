@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Register</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -100,79 +100,126 @@
       <div class="container">
         <h1 class="register-title">Register</h1>
 
+        <div id="register-mess" class="register-mess"></div>
+
         <form id="formUser">
-          <div class="register-form">
-            <div class="input-item">
+          <div class="row register-form">
+            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="input-title">
+                <span>email</span>
+                <span class="text-danger">(*)</span>
+              </div>
+
+              <!-- email -->
               <input
                 id="email"
+                name="email"
                 class="input_style"
                 type="text"
-                placeholder="email"
                 required
                 pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,}$"
               />
-              <span class="text-danger">(*)</span>
               <div id="txt-email" class="txt-input"></div>
             </div>
-            <div class="input-item">
+
+            <!-- name -->
+            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="input-title">
+                <span>name</span>
+                <span class="text-danger">(*)</span>
+              </div>
+
               <input
                 id="name"
+                name="name"
                 class="input_style"
                 type="text"
-                placeholder="name"
                 required
                 pattern="[a-zA-ZÀÁ ÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]+$"
               />
-              <span class="text-danger">(*)</span>
               <div id="txt-name" class="txt-input"></div>
             </div>
-            <div class="input-item">
+
+            <!-- password -->
+            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="input-title">
+                <span>password</span>
+                <span class="text-danger">(*)</span>
+              </div>
               <input
                 id="password"
+                name="password"
                 class="input_style"
                 type="password"
-                placeholder="password"
                 required
                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,10}$"
               />
-              <span class="text-danger">(*)</span>
               <div id="txt-password" class="txt-input"></div>
             </div>
-            <div class="input-item">
+
+            <!-- phone -->
+            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="input-title">
+                <span>phone</span>
+                <span class="text-danger">(*)</span>
+              </div>
               <input
                 id="phone"
+                name="phone"
                 class="input_style"
                 type="tel"
-                placeholder="phone"
                 required
                 minlength="7"
                 maxlength="10"
               />
-              <span class="text-danger">(*)</span>
               <div id="txt-phone" class="txt-input"></div>
             </div>
 
-            <div class="input-item">
+            <!-- password confirm -->
+            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="input-title">
+                <span>password confirm</span>
+                <span class="text-danger">(*)</span>
+              </div>
               <input
                 id="passwordConfirm"
+                name="passwordConfirm"
                 class="input_style"
                 type="password"
-                placeholder="password confirm"
                 required
                 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,10}$"
               />
-              <span class="text-danger">(*)</span>
               <span id="txt-passwordConfirm" class="txt-input"></span>
             </div>
-            <div class="gender-item">
+
+            <!-- gender -->
+            <div class="gender-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
               <div class="register-gender">
-                <span class="mr-6">Gender</span>
-                <input type="radio" id="male" name="gender" value="true" />
-                <label for="male">Male</label>
-                <input type="radio" id="female" name="gender" value="false" />
-                <label for="female">Female</label>
+                <div id="txt-gender" class="txt-input"></div>
+                <div>
+                  <p class="mr-6">Gender</p>
+                  <div class="row">
+                    <div class="col-6">
+                      <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="true"
+                      />
+                      <label for="male">Male</label>
+                    </div>
+                    <div class="col-6">
+                      <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="false"
+                      />
+                      <label for="female">Female</label>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div id="txt-gender" class="txt-input"></div>
             </div>
             <div class="blank"></div>
             <button id="btn-submit" class="btn-submit">Submit</button>
@@ -186,7 +233,7 @@
       <div class="footer-top">
         <div class="container">
           <div class="row">
-            <div class="help">
+            <div class="help col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <h3>Get help</h3>
               <ul>
                 <a href=""><li>Contact us</li></a>
@@ -195,7 +242,7 @@
                 <a href=""><li>Nike+</li></a>
               </ul>
             </div>
-            <div class="orders">
+            <div class="orders col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <h3>Orders</h3>
               <ul>
                 <a href=""><li>Payment options</li></a>
@@ -203,7 +250,7 @@
                 <a href=""><li>Returns</li></a>
               </ul>
             </div>
-            <div class="register">
+            <div class="register col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <h3>Register</h3>
               <p>
                 Create one account to manage everything you do with Nike, from
@@ -217,7 +264,7 @@
       <div class="footer-bottom">
         <div class="container">
           <div class="row">
-            <div class="signup">
+            <div class="signup col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <h3>Email sign up</h3>
               <p>Be the first to know about new products and special offers.</p>
               <a href="" class="red">Sign up now</a>
@@ -227,7 +274,7 @@
               <p>Give the gift that always fits.</p>
               <a href="" class="red">View cards</a>
             </div>
-            <div class="stores">
+            <div class="stores col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <h3>Stores near you</h3>
               <p>Locate a Nike retail store or authorized retailer.</p>
               <a href="" class="red">Search</a>

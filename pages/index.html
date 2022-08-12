@@ -96,51 +96,141 @@
     </div>
 
     <!-- carousel -->
-    <div class="carousel">
+    <div class="carousel-index">
       <div class="container">
-        <div class="productSlides">
-          <div class="item">
-            <div class="image">
-              <img src="../img/image4.png" alt="image1" />
-            </div>
-            <div class="caption">
-              <p class="name">Product name</p>
-              <p class="description">Product description ...</p>
-              <button class="buy-now">Buy now</button>
-            </div>
-          </div>
-          <div class="item">
-            <div class="image">
-              <img src="../img/image4.png" alt="image1" />
-            </div>
-            <div class="caption">
-              <p class="name">Product name</p>
-              <p class="description">Product description ...</p>
-              <button class="buy-now">Buy now</button>
-            </div>
-          </div>
-          <div class="item">
-            <div class="image">
-              <img src="../img/image4.png" alt="image1" />
-            </div>
-            <div class="caption">
-              <p class="name">Product name</p>
-              <p class="description">Product description ...</p>
-              <button class="buy-now">Buy now</button>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <img
+                        src="https://shop.cyberlearn.vn/images/adidas-prophere.png"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="caption col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <h3 class="name">Adidas Prophere</h3>
+                      <p class="description">
+                        The adidas Primeknit upper wraps the foot with a
+                        supportive fit that enhances movement.
+                      </p>
+                      <a href="./detail.html?productid=1" target="_blank"
+                        ><button class="btn btn-warning buy-now">
+                          Buy now
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <img
+                        src="https://shop.cyberlearn.vn/images/adidas-prophere-black-white.png"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="caption col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <h3 class="name">Adidas Prophere Black White</h3>
+                      <p class="description">
+                        The adidas Primeknit upper wraps the foot with a
+                        supportive fit that enhances movement.
+                      </p>
+                      <a href="./detail.html?productid=2" target="_blank">
+                        <button class="btn btn-warning buy-now">
+                          Buy now
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <img
+                        src="https://shop.cyberlearn.vn/images/adidas-prophere-customize.png"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="caption col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <h3 class="name">Adidas Prophere Customize</h3>
+                      <p class="description">
+                        The adidas Primeknit upper wraps the foot with a
+                        supportive fit that enhances movement.
+                      </p>
+                      <a href="./detail.html?productid=3" target="_blank">
+                        <button class="btn btn-warning buy-now">
+                          Buy now
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="background">
-      <img src="../img/image6.png" alt="" class="w-100" />
-    </div>
+    <div class="background"></div>
 
     <!-- product features -->
     <div class="features mt-4">
       <div class="container">
         <h1 class="text-center">-Product Feature -</h1>
-        <div id="featureBody" class="feature-body"></div>
+        <div id="featureBody" class="row"></div>
       </div>
     </div>
 
@@ -149,7 +239,7 @@
       <div class="footer-top">
         <div class="container">
           <div class="row">
-            <div class="help">
+            <div class="help col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <h3>Get help</h3>
               <ul>
                 <a href=""><li>Contact us</li></a>
@@ -158,7 +248,7 @@
                 <a href=""><li>Nike+</li></a>
               </ul>
             </div>
-            <div class="orders">
+            <div class="orders col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <h3>Orders</h3>
               <ul>
                 <a href=""><li>Payment options</li></a>
@@ -166,7 +256,7 @@
                 <a href=""><li>Returns</li></a>
               </ul>
             </div>
-            <div class="register">
+            <div class="register col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <h3>Register</h3>
               <p>
                 Create one account to manage everything you do with Nike, from
@@ -180,17 +270,17 @@
       <div class="footer-bottom">
         <div class="container">
           <div class="row">
-            <div class="signup">
+            <div class="signup col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <h3>Email sign up</h3>
               <p>Be the first to know about new products and special offers.</p>
               <a href="" class="red">Sign up now</a>
             </div>
-            <div class="gift">
+            <div class="gift col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <h3>Gift cards</h3>
               <p>Give the gift that always fits.</p>
               <a href="" class="red">View cards</a>
             </div>
-            <div class="stores">
+            <div class="stores col-lg-4 col-md-4 col-sm-12 col-xs-12">
               <h3>Stores near you</h3>
               <p>Locate a Nike retail store or authorized retailer.</p>
               <a href="" class="red">Search</a>
@@ -214,7 +304,7 @@
     ></script>
 
     <!-- SLICKS -->
-    <script
+    <!-- <script
       type="text/javascript"
       src="//code.jquery.com/jquery-1.11.0.min.js"
     ></script>
@@ -237,7 +327,7 @@
           speed: 300,
         });
       });
-    </script>
+    </script> -->
 
     <!-- axios -->
     <script

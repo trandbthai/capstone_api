@@ -34,6 +34,9 @@ ul {
 .header .container .item .item-right {
   display: flex;
 }
+.header .container .item .item-right button {
+  color: white;
+}
 .header .container .item .item-right button:hover {
   color: #dfdcdc;
 }
@@ -74,20 +77,24 @@ ul {
   font-weight: 400;
   margin-bottom: 20px;
 }
+.register-content .register-mess {
+  font-size: 30px;
+  margin-left: 60px;
+  color: red;
+}
 .register-content .register-form {
   padding: 40px 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
   font-size: 30px;
   color: black;
 }
-.register-content .register-form .input-item {
-  border-bottom: 5px solid #ae18e2;
+.register-content .register-form .input-item .input-title {
+  display: flex;
+  justify-content: space-between;
 }
 .register-content .register-form .input-item .input_style {
-  width: 90%;
+  width: 100%;
   background-color: #fffcfc;
+  border-bottom: 5px solid #ae18e2;
   line-height: 36px;
   padding: 10px 0;
   outline: none;
@@ -108,13 +115,10 @@ ul {
 .register-content .register-form .gender-item .register-gender {
   border-bottom: none;
   padding-top: 10px;
-  display: flex;
-  align-items: center;
 }
 .register-content .register-form .gender-item .register-gender input {
-  margin: 0 10px;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 }
 .register-content .register-form .gender-item .register-gender input:checked {
   accent-color: #ae18e2;
@@ -137,20 +141,26 @@ ul {
 .footer h3 {
   text-transform: uppercase;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
   font-size: 24px;
 }
 .footer a.red {
   color: red;
+}
+.footer a.red:hover {
+  font-weight: 500;
 }
 .footer p {
   margin-bottom: 10px;
 }
 .footer .row {
   padding: 15px 0;
-  display: grid;
-  grid-template-columns: 2fr 1.5fr 2fr;
-  gap: 30px;
+}
+.footer .row ul a li:hover {
+  font-weight: 500;
+}
+.footer .footer-top {
+  padding-left: 20px;
 }
 .footer .footer-top .help {
   border-right: 1px solid rgba(222, 220, 220, 0.6);
@@ -159,6 +169,7 @@ ul {
   border-right: 1px solid rgba(222, 220, 220, 0.6);
 }
 .footer .footer-bottom {
+  padding-left: 20px;
   background-color: rgba(248, 245, 245, 0.937254902);
 }
 .footer .footer-bottom .signup {

@@ -33,6 +33,7 @@ ul {
       .item-right {
         display: flex;
         button {
+          color: white;
           &:hover {
             color: #dfdcdc;
           }
@@ -79,18 +80,24 @@ ul {
     font-weight: 400;
     margin-bottom: 20px;
   }
+  .register-mess {
+    font-size: 30px;
+    margin-left: 60px;
+    color: red;
+  }
   .register-form {
     padding: 40px 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
     font-size: 30px;
     color: black;
     .input-item {
-      border-bottom: 5px solid #ae18e2;
+      .input-title {
+        display: flex;
+        justify-content: space-between;
+      }
       .input_style {
-        width: 90%;
+        width: 100%;
         background-color: #fffcfc;
+        border-bottom: 5px solid #ae18e2;
 
         line-height: 36px;
         padding: 10px 0;
@@ -110,12 +117,9 @@ ul {
       .register-gender {
         border-bottom: none;
         padding-top: 10px;
-        display: flex;
-        align-items: center;
         input {
-          margin: 0 10px;
-          width: 40px;
-          height: 40px;
+          width: 20px;
+          height: 20px;
           &:checked {
             accent-color: #ae18e2;
           }
@@ -144,23 +148,33 @@ ul {
   h3 {
     text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin: 20px 0 10px 0;
     font-size: 24px;
   }
 
   a.red {
     color: red;
+    &:hover {
+      font-weight: 500;
+    }
   }
   p {
     margin-bottom: 10px;
   }
   .row {
     padding: 15px 0;
-    display: grid;
-    grid-template-columns: 2fr 1.5fr 2fr;
-    gap: 30px;
+    ul {
+      a {
+        li {
+          &:hover {
+            font-weight: 500;
+          }
+        }
+      }
+    }
   }
   .footer-top {
+    padding-left: 20px;
     .help {
       border-right: 1px solid rgba($color: #dedcdc, $alpha: 0.6);
     }
@@ -170,6 +184,7 @@ ul {
     }
   }
   .footer-bottom {
+    padding-left: 20px;
     background-color: #f8f5f5ef;
     .signup {
       border-right: 1px solid rgba($color: #dedcdc, $alpha: 0.6);

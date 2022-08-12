@@ -1,4 +1,6 @@
-document.getElementById("btn-submit").onclick = async function () {
+document.getElementById("btn-submit").onclick = function (e) {
+  console.log("hello");
+  e.preventDefault();
   // check validation
   var isValid = checkValidation();
   console.log(isValid);
@@ -7,7 +9,6 @@ document.getElementById("btn-submit").onclick = async function () {
   }
 
   //   post data api
-
   var email = document.getElementById("email").value;
   var name = document.getElementById("name").value;
   var password = document.getElementById("password").value;
@@ -26,42 +27,45 @@ document.getElementById("btn-submit").onclick = async function () {
 
   console.log(newUser);
 
-  var mess = "";
-  try {
-    var result = await axios({
-      url: " https://shop.cyberlearn.vn/api/Users/signup",
-      method: "POST",
-      data: newUser,
-    });
-    mess = result.data.content;
-    alert(mess);
-  } catch (err) {
-    alert(err.response?.data);
-  }
+  var promise = axios({
+    url: " https://shop.cyberlearn.vn/api/Users/signup",
+    method: "POST",
+    data: newUser,
+  });
+
+  promise.then(function (result) {
+    console.log("result", result);
+    document.getElementById("register-mess").innerHTML = result.data.message;
+    resetInput();
+  });
+
+  promise.catch(function (err) {
+    console.log("err", err);
+    document.getElementById("register-mess").innerHTML =
+      err.response.data.message;
+    resetInput();
+  });
 };
 
 const checkValidation = () => {
-  var isValid = document.getElementById("formUser").checkValidity();
-
   //   check valueMissing and patternMismatch
-  if (!isValid) {
-    var inputList = document.querySelectorAll(".input_style");
+  var inputList = document.querySelectorAll(".input_style");
 
-    for (let i = 0; i < inputList.length; i++) {
-      let input = inputList[i];
-      if (input.validity.valueMissing) {
-        document.getElementById("txt-" + `${input.id}`).innerHTML =
-          `${input.placeholder}` + " không được để trống.";
-      } else if (input.validity.patternMismatch) {
-        document.getElementById("txt-" + `${input.id}`).innerHTML =
-          `${input.placeholder}` + " không đúng định dạng.";
-      } else {
-        document.getElementById("txt-" + `${input.id}`).innerHTML = "";
-      }
+  for (let i = 0; i < inputList.length; i++) {
+    let input = inputList[i];
+    if (input.validity.valueMissing) {
+      document.getElementById("txt-" + `${input.id}`).innerHTML =
+        `${input.name}` + " không được để trống.";
+      return false;
+    } else if (input.validity.patternMismatch) {
+      document.getElementById("txt-" + `${input.id}`).innerHTML =
+        `${input.name}` + " không đúng định dạng.";
+    } else {
+      document.getElementById("txt-" + `${input.id}`).innerHTML = "";
     }
-    return false;
   }
 
+  //check gender
   var maleChecked = document.getElementById("male").checked;
   var femaleChecked = document.getElementById("female").checked;
   if (!maleChecked && !femaleChecked) {
@@ -84,4 +88,14 @@ const checkValidation = () => {
   }
 
   return true;
+};
+
+window.resetInput = () => {
+  var inputList = document.querySelectorAll(".input_style");
+
+  for (let i = 0; i < inputList.length; i++) {
+    let input = inputList[i];
+    console.log(input);
+    document.getElementById(input.id).value = "";
+  }
 };

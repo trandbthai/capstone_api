@@ -34,6 +34,9 @@ ul {
 .header .container .item .item-right {
   display: flex;
 }
+.header .container .item .item-right button {
+  color: white;
+}
 .header .container .item .item-right button:hover {
   color: #dfdcdc;
 }
@@ -64,30 +67,25 @@ ul {
   opacity: 1;
 }
 
-.content .item {
-  display: flex;
+.content .row {
   padding: 65px;
 }
-.content .item .item-left {
-  width: 40%;
-}
-.content .item .item-left img {
+.content .row .item-left img {
   width: 70%;
 }
-.content .item .item-right {
-  width: 60%;
+.content .row .item-right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.content .item .item-right h1 {
+.content .row .item-right h1 {
   font-size: 30px;
 }
-.content .item .item-right h3 {
+.content .row .item-right h3 {
   font-size: 24px;
   color: #1ed90e;
 }
-.content .item .item-right .showing-size .size-item {
+.content .row .item-right .showing-size .size-item {
   width: 50px;
   height: 50px;
   margin-right: 15px;
@@ -95,29 +93,29 @@ ul {
   font-weight: 600;
   font-size: 24px;
 }
-.content .item .item-right .showing-size .size-item:hover {
+.content .row .item-right .showing-size .size-item:hover {
   background-color: #8c8a8a;
 }
-.content .item .item-right .showing-size .size-active {
+.content .row .item-right .showing-size .size-active {
   background-color: #8c8a8a;
   color: white;
 }
-.content .item .item-right .target-price {
+.content .row .item-right .target-price {
   margin-top: 10px;
   color: #fc0303;
   font-size: 30px;
 }
-.content .item .item-right .quantity-group {
+.content .row .item-right .quantity-group {
   margin-top: 10px;
 }
-.content .item .item-right .quantity-group .quantity-number {
+.content .row .item-right .quantity-group .quantity-number {
   width: 50px;
   text-align: center;
 }
-.content .item .item-right .btn-adding {
+.content .row .item-right .btn-adding {
   margin-top: 20px;
 }
-.content .item .item-right .btn-adding .add_to_cart {
+.content .row .item-right .btn-adding .add_to_cart {
   padding: 10px;
   font-weight: 500;
   font-size: 20px;
@@ -135,46 +133,43 @@ ul {
 }
 .related-product .related-product-content {
   padding: 30px 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 100px;
 }
-.related-product .related-product-content .product-item {
+.related-product .related-product-content .product-col .product-item {
   background-color: #f8f8f8;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.related-product .related-product-content .product-item .product-img {
+.related-product .related-product-content .product-col .product-item .product-img {
   padding: 15px 45px;
 }
-.related-product .related-product-content .product-item .product-img img {
+.related-product .related-product-content .product-col .product-item .product-img img {
   width: 100%;
 }
-.related-product .related-product-content .product-item .product-details {
+.related-product .related-product-content .product-col .product-item .product-details {
   padding: 0 30px 30px 30px;
 }
-.related-product .related-product-content .product-item .product-details .product-name {
+.related-product .related-product-content .product-col .product-item .product-details .product-name {
   margin-bottom: 0;
 }
-.related-product .related-product-content .product-item .product-details .product-description {
+.related-product .related-product-content .product-col .product-item .product-details .product-description {
   color: #dedcdc;
 }
-.related-product .related-product-content .product-item .product-action {
+.related-product .related-product-content .product-col .product-item .product-action {
   display: flex;
 }
-.related-product .related-product-content .product-item .product-action .product-buy {
+.related-product .related-product-content .product-col .product-item .product-action .product-buy {
   display: block;
   width: 50%;
   line-height: 40px;
   text-align: center;
   background-color: #f8b653;
 }
-.related-product .related-product-content .product-item .product-action .product-buy:hover {
+.related-product .related-product-content .product-col .product-item .product-action .product-buy:hover {
   background-color: #e28d0d;
   color: white;
 }
-.related-product .related-product-content .product-item .product-action .product-price {
+.related-product .related-product-content .product-col .product-item .product-action .product-price {
   display: block;
   width: 50%;
   text-align: center;
@@ -186,20 +181,26 @@ ul {
 .footer h3 {
   text-transform: uppercase;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin: 20px 0 10px 0;
   font-size: 24px;
 }
 .footer a.red {
   color: red;
+}
+.footer a.red:hover {
+  font-weight: 500;
 }
 .footer p {
   margin-bottom: 10px;
 }
 .footer .row {
   padding: 15px 0;
-  display: grid;
-  grid-template-columns: 2fr 1.5fr 2fr;
-  gap: 30px;
+}
+.footer .row ul a li:hover {
+  font-weight: 500;
+}
+.footer .footer-top {
+  padding-left: 20px;
 }
 .footer .footer-top .help {
   border-right: 1px solid rgba(222, 220, 220, 0.6);
@@ -208,6 +209,7 @@ ul {
   border-right: 1px solid rgba(222, 220, 220, 0.6);
 }
 .footer .footer-bottom {
+  padding-left: 20px;
   background-color: rgba(248, 245, 245, 0.937254902);
 }
 .footer .footer-bottom .signup {

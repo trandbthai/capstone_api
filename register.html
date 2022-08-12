@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Detail</title>
+    <title>Register</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -37,24 +37,8 @@
     <!-- TAILWIND -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- SLICK -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
-      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
-      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/detail.css" />
+    <link rel="stylesheet" href="./css/register.css" />
   </head>
   <body>
     <!-- header -->
@@ -84,10 +68,10 @@
     <div class="menu py-2">
       <div class="container">
         <div class="nav-bar">
-          <div class="tab">
+          <div class="tab active">
             <a href="./index.html">Home</a>
           </div>
-          <div class="tab active"><a href="">Men</a></div>
+          <div class="tab"><a href="">Men</a></div>
           <div class="tab"><a href="">Woman</a></div>
           <div class="tab"><a href="">Kid</a></div>
           <div class="tab"><a href="">Sport</a></div>
@@ -95,50 +79,138 @@
       </div>
     </div>
 
-    <!-- content -->
-    <div class="content">
+    <!-- register-content -->
+    <div class="register-content">
       <div class="container">
-        <div class="row">
-          <div class="item-left col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <img id="target-img" src="" alt="" />
-          </div>
-          <div class="item-right col-lg-6 col-md-6 col-sm-12 col-xs-12">
-            <h1 id="target-name">Product name</h1>
-            <p id="target-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perspiciatis quam quos dolorem reprehenderit maxime aperiam!
-              Quidem temporibus veniam cumque nostrum distinctio, saepe aliquam
-              expedita aspernatur dolore explicabo perferendis, unde odit!
-            </p>
-            <h3>Available size</h3>
-            <div id="target-size" class="showing-size"></div>
-            <span class="target-price">$<span id="target-price"></span></span>
-            <div class="quantity-group">
-              <button class="btn btn-primary" id="quantity-left-plus">+</button>
-              <input
-                type="number"
-                id="quantity-input"
-                class="quantity-number p-2"
-              />
-              <button class="btn btn-primary" id="quantity-right-minus">
-                -
-              </button>
-            </div>
-            <div class="btn-adding">
-              <button class="add_to_cart">Add to Cart</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+        <h1 class="register-title">Register</h1>
 
-    <div class="related-product">
-      <div class="container">
-        <h1 class="title">- Related Product -</h1>
-        <div
-          id="related-product-content"
-          class="row related-product-content"
-        ></div>
+        <div id="register-mess" class="register-mess"></div>
+
+        <form id="formUser">
+          <div class="row register-form">
+            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="input-title">
+                <span>email</span>
+                <span class="text-danger">(*)</span>
+              </div>
+
+              <!-- email -->
+              <input
+                id="email"
+                name="email"
+                class="input_style"
+                type="text"
+                required
+                pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,}$"
+              />
+              <div id="txt-email" class="txt-input"></div>
+            </div>
+
+            <!-- name -->
+            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="input-title">
+                <span>name</span>
+                <span class="text-danger">(*)</span>
+              </div>
+
+              <input
+                id="name"
+                name="name"
+                class="input_style"
+                type="text"
+                required
+                pattern="[a-zA-ZÀÁ ÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]+$"
+              />
+              <div id="txt-name" class="txt-input"></div>
+            </div>
+
+            <!-- password -->
+            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="input-title">
+                <span>password</span>
+                <span class="text-danger">(*)</span>
+              </div>
+              <input
+                id="password"
+                name="password"
+                class="input_style"
+                type="password"
+                required
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,10}$"
+              />
+              <div id="txt-password" class="txt-input"></div>
+            </div>
+
+            <!-- phone -->
+            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="input-title">
+                <span>phone</span>
+                <span class="text-danger">(*)</span>
+              </div>
+              <input
+                id="phone"
+                name="phone"
+                class="input_style"
+                type="tel"
+                required
+                minlength="7"
+                maxlength="10"
+              />
+              <div id="txt-phone" class="txt-input"></div>
+            </div>
+
+            <!-- password confirm -->
+            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="input-title">
+                <span>password confirm</span>
+                <span class="text-danger">(*)</span>
+              </div>
+              <input
+                id="passwordConfirm"
+                name="passwordConfirm"
+                class="input_style"
+                type="password"
+                required
+                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,10}$"
+              />
+              <span id="txt-passwordConfirm" class="txt-input"></span>
+            </div>
+
+            <!-- gender -->
+            <div class="gender-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <div class="register-gender">
+                <div id="txt-gender" class="txt-input"></div>
+                <div>
+                  <p class="mr-6">Gender</p>
+                  <div class="row">
+                    <div class="col-5">
+                      <input
+                        type="radio"
+                        id="male"
+                        name="gender"
+                        value="true"
+                      />
+                      <label for="male">Male</label>
+                    </div>
+                    <div class="col-7">
+                      <input
+                        type="radio"
+                        id="female"
+                        name="gender"
+                        value="false"
+                      />
+                      <label for="female">Female</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="blank col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+              <button id="btn-submit " class="btn-submit">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -219,6 +291,6 @@
     ></script>
 
     <!-- index.js -->
-    <script src="../js/detail.js" type="module"></script>
+    <script src="../js/register.js" type="module"></script>
   </body>
 </html>

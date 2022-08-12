@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Register</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -37,24 +37,8 @@
     <!-- TAILWIND -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- SLICK -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
-      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
-      integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/register.css" />
+    <link rel="stylesheet" href="./css/index.css" />
   </head>
   <body>
     <!-- header -->
@@ -85,7 +69,7 @@
       <div class="container">
         <div class="nav-bar">
           <div class="tab active">
-            <a href="./index.html">Home</a>
+            <a href="">Home</a>
           </div>
           <div class="tab"><a href="">Men</a></div>
           <div class="tab"><a href="">Woman</a></div>
@@ -95,138 +79,142 @@
       </div>
     </div>
 
-    <!-- register-content -->
-    <div class="register-content">
+    <!-- carousel -->
+    <div class="carousel-index">
       <div class="container">
-        <h1 class="register-title">Register</h1>
-
-        <div id="register-mess" class="register-mess"></div>
-
-        <form id="formUser">
-          <div class="row register-form">
-            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="input-title">
-                <span>email</span>
-                <span class="text-danger">(*)</span>
-              </div>
-
-              <!-- email -->
-              <input
-                id="email"
-                name="email"
-                class="input_style"
-                type="text"
-                required
-                pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,}$"
-              />
-              <div id="txt-email" class="txt-input"></div>
-            </div>
-
-            <!-- name -->
-            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="input-title">
-                <span>name</span>
-                <span class="text-danger">(*)</span>
-              </div>
-
-              <input
-                id="name"
-                name="name"
-                class="input_style"
-                type="text"
-                required
-                pattern="[a-zA-ZÀÁ ÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s]+$"
-              />
-              <div id="txt-name" class="txt-input"></div>
-            </div>
-
-            <!-- password -->
-            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="input-title">
-                <span>password</span>
-                <span class="text-danger">(*)</span>
-              </div>
-              <input
-                id="password"
-                name="password"
-                class="input_style"
-                type="password"
-                required
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,10}$"
-              />
-              <div id="txt-password" class="txt-input"></div>
-            </div>
-
-            <!-- phone -->
-            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="input-title">
-                <span>phone</span>
-                <span class="text-danger">(*)</span>
-              </div>
-              <input
-                id="phone"
-                name="phone"
-                class="input_style"
-                type="tel"
-                required
-                minlength="7"
-                maxlength="10"
-              />
-              <div id="txt-phone" class="txt-input"></div>
-            </div>
-
-            <!-- password confirm -->
-            <div class="input-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="input-title">
-                <span>password confirm</span>
-                <span class="text-danger">(*)</span>
-              </div>
-              <input
-                id="passwordConfirm"
-                name="passwordConfirm"
-                class="input_style"
-                type="password"
-                required
-                pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,10}$"
-              />
-              <span id="txt-passwordConfirm" class="txt-input"></span>
-            </div>
-
-            <!-- gender -->
-            <div class="gender-item col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <div class="register-gender">
-                <div id="txt-gender" class="txt-input"></div>
-                <div>
-                  <p class="mr-6">Gender</p>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div
+              id="carouselExampleIndicators"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
                   <div class="row">
-                    <div class="col-5">
-                      <input
-                        type="radio"
-                        id="male"
-                        name="gender"
-                        value="true"
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <img
+                        src="https://shop.cyberlearn.vn/images/adidas-prophere.png"
+                        alt="..."
                       />
-                      <label for="male">Male</label>
                     </div>
-                    <div class="col-7">
-                      <input
-                        type="radio"
-                        id="female"
-                        name="gender"
-                        value="false"
+                    <div class="caption col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <h3 class="name">Adidas Prophere</h3>
+                      <p class="description">
+                        The adidas Primeknit upper wraps the foot with a
+                        supportive fit that enhances movement.
+                      </p>
+                      <a href="./detail.html?productid=1" target="_blank"
+                        ><button class="btn btn-warning buy-now">
+                          Buy now
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <img
+                        src="https://shop.cyberlearn.vn/images/adidas-prophere-black-white.png"
+                        alt="..."
                       />
-                      <label for="female">Female</label>
+                    </div>
+                    <div class="caption col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <h3 class="name">Adidas Prophere Black White</h3>
+                      <p class="description">
+                        The adidas Primeknit upper wraps the foot with a
+                        supportive fit that enhances movement.
+                      </p>
+                      <a href="./detail.html?productid=2" target="_blank">
+                        <button class="btn btn-warning buy-now">
+                          Buy now
+                        </button></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <img
+                        src="https://shop.cyberlearn.vn/images/adidas-prophere-customize.png"
+                        alt="..."
+                      />
+                    </div>
+                    <div class="caption col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <h3 class="name">Adidas Prophere Customize</h3>
+                      <p class="description">
+                        The adidas Primeknit upper wraps the foot with a
+                        supportive fit that enhances movement.
+                      </p>
+                      <a href="./detail.html?productid=3" target="_blank">
+                        <button class="btn btn-warning buy-now">
+                          Buy now
+                        </button></a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="blank col-lg-6 col-md-6 col-sm-12 col-xs-12"></div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-              <button id="btn-submit " class="btn-submit">Submit</button>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
             </div>
           </div>
-        </form>
+        </div>
+      </div>
+    </div>
+    <div class="background"></div>
+
+    <!-- product features -->
+    <div class="features mt-4">
+      <div class="container">
+        <h1 class="text-center">-Product Feature -</h1>
+        <div id="featureBody" class="row"></div>
       </div>
     </div>
 
@@ -285,6 +273,7 @@
         </div>
       </div>
     </footer>
+
     <!-- Bootstrap JavaScript Libraries -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -307,6 +296,6 @@
     ></script>
 
     <!-- index.js -->
-    <script src="../js/register.js" type="module"></script>
+    <script src="../js/index.js" type="module"></script>
   </body>
 </html>

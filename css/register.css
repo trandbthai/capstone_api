@@ -124,7 +124,7 @@ ul {
   accent-color: #ae18e2;
 }
 .register-content .register-form .gender-item .register-gender label {
-  margin-right: 40px;
+  font-size: 28px;
 }
 .register-content .register-form .gender-item .txt-input {
   color: #f50e0e;

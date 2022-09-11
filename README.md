@@ -1,7 +1,7 @@
 # capstone_api
 
 website
-http://capstoneapi.surge.sh
+http://shoes_shop_api.surge.sh/
 
 youtube
 https://youtu.be/6Hk658nhu4E
